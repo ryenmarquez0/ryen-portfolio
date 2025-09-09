@@ -1,0 +1,27 @@
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.contact-links a {
+  color: #2979FF; /* electric blue */
+  font-size: 1.8rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-links a:hover {
+  transform: scale(1.2);
+  color: #1C54B2; /* darker blue */
+}

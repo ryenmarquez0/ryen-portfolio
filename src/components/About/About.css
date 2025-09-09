@@ -1,0 +1,19 @@
+.about {
+  background-color: #1E1E1E; /* dark gray background */
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(18, 18, 18, 0.7);
+  margin-bottom: 60px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  color: #B0BEC5; /* light gray */
+}
