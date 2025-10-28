@@ -1,14 +1,133 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #121212; /* charcoal black */
-  color: #FFFFFF; /* white text */
-  line-height: 1.6;
+
+
+:root {
+  --primary: #00eaff;
+  --secondary: #ff007f;
+  --text: #e5f3ff;
+  --bg: #040a11;
+  --card-bg: rgba(0, 15, 25, 0.6);
+  --accent-glow: 0 0 25px var(--primary);
 }
 
-.app {
-  max-width: 900px;
-  margin: 0 auto;
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Press Start 2P", "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.app-root {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  animation: pulse-bg 6s infinite alternate;
+}
+
+
+canvas,
+.background-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.cursor-trail {
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.main-content {
+  position: relative;
+  z-index: 5;
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+
+
+section {
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 950px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 45px var(--secondary);
+}
+
+
+.footer-credit {
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+  color: #9fd9ff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 5;
+}
+
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  background: linear-gradient(135deg, #001a2a, #052d3a);
+  color: var(--text);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--secondary);
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-bg {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.25);
+  }
 }

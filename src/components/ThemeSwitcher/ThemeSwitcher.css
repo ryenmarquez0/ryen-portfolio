@@ -1,0 +1,49 @@
+.theme-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 140px;
+  height: 50px;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 15px var(--accent);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.switch-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.theme-switcher.cyber {
+  background: radial-gradient(circle, #2a002f, #000);
+  --accent: #ff00c8;
+  --text: #ffffff;
+}
+
+.theme-switcher.retro {
+  background: radial-gradient(circle, #002f2a, #000);
+  --accent: #00ff9f;
+  --text: #00f3ff;
+}
+
+.theme-switcher:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 25px var(--accent);
+}
+
+.mode-label {
+  text-shadow: 0 0 8px var(--accent), 0 0 20px var(--accent);
+  letter-spacing: 2px;
+}

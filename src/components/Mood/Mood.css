@@ -1,0 +1,9 @@
+.mood-section { margin: 36px 0; display:flex; justify-content:center; }
+.mood-container { width: 100%; max-width: 560px; border: 1px solid rgba(255,255,255,0.04); transition: background .6s ease, border-color .4s ease; }
+.mood-container h2 { margin: 0 0 6px; font-size: 1.35rem; }
+.mood-btn { margin-top: 12px; padding: 10px 16px; border-radius: 26px; border: none; color: #021019; font-weight:700; cursor:pointer; transition: transform .15s ease; }
+.mood-btn:active { transform: translateY(1px); }
+.mood-result { margin-top: 18px; animation: fadeIn .7s ease both; }
+.mood-name { font-weight:700; font-size:1.2rem; margin:6px 0 12px; text-transform:capitalize; }
+.spotify-placeholder iframe { border-radius: 10px; overflow:hidden; }
+@keyframes fadeIn { from { opacity:0; transform: translateY(8px) } to { opacity:1; transform: translateY(0) } }

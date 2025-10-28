@@ -1,0 +1,6 @@
+.skills-section { padding: 40px 0; text-align: center; margin: 18px 0; }
+.skills-section h2 { font-size: 2rem; margin-bottom: 20px; background: linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.skills-container { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; }
+.skill-card { width:130px; padding:18px; border-radius:12px; display:flex; flex-direction:column; align-items:center; gap:8px; cursor:pointer; }
+.skill-icon { font-size:2.2rem; color: #ffffff; }
+.skill-card p { margin:0; font-weight:600; color: rgba(255,255,255,0.88); }
